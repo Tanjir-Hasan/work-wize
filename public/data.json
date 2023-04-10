@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": "1",
         "logo": "./images/google_prev_ui.png",
         "job_title": "Software Engineer",
         "company_name": "Google",
@@ -16,7 +16,7 @@
         "email": "jobs@google.com"
     },
     {
-        "id": 2,
+        "id": "2",
         "logo": "./images/mozilla.jpg",
         "job_title": "Frontend Developer",
         "company_name": "Mozilla",
@@ -32,7 +32,7 @@
         "email": "jobs@mozilla.com"
     },
     {
-        "id": 3,
+        "id": "3",
         "logo": "./images/apple.jpg",
         "job_title": "iOS Developer",
         "company_name": "Apple",
@@ -48,7 +48,7 @@
         "email": "jobs@apple.com"
     },
     {
-        "id": 4,
+        "id": "4",
         "logo": "./images/samsung.jpg",
         "job_title": "Android Developer",
         "company_name": "Samsung",
@@ -64,7 +64,7 @@
         "email": "jobs@samsung.com"
     },
     {
-        "id": 5,
+        "id": "5",
         "logo": "./images/netflix.jpg",
         "job_title": "Backend Engineer",
         "company_name": "Netflix",
@@ -80,7 +80,7 @@
         "email": "jobs@netflix.com"
     },
     {
-        "id": 6,
+        "id": "6",
         "logo": "./images/hbo.jpg",
         "job_title": "Content Producer",
         "company_name": "HBO Max",
