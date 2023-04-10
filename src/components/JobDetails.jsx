@@ -16,8 +16,11 @@ const JobDetails = () => {
 
   return (
     <>
-      <h1 className='text-3xl font-bold text-center my-10'>Job Details</h1>
-      <div className='flex max-w-6xl mx-auto'>
+      <div className='relative'>
+        <img src="../../public/images/grunge_detailed_dusty_overlay_texture_2804.jpg" alt="" className='w-full h-48 object-cover opacity-50 mb-20' />
+        <h1 className='text-3xl font-bold text-center absolute inset-0 flex justify-center items-center h-full'>Job Details</h1>
+      </div>
+      <div className='flex max-w-6xl mx-auto items-center'>
         <div className='w-3/4 px-16'>
           <p className='mb-2'><span className='font-bold'>Job Description:</span> {data.job_description}</p>
           <p className='mb-2'> <span className='font-bold'>Job Responsibility:</span> {data.job_responsibility}</p>
@@ -26,7 +29,6 @@ const JobDetails = () => {
           <p className='mb-2'><span className='font-bold'>Experiences:</span> {data.experience}</p>
         </div>
         <div>
-
           <div className='flex flex-col p-10 bg-gradient-to-r from-blue-100 to-purple-100 bg-opacity-10'>
             <h3 className='text-xl font-bold'>Job Details:</h3>
             <hr className='border-1 border-violet-500 my-4' />

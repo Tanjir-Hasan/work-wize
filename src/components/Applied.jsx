@@ -14,7 +14,11 @@ const Applied = () => {
     return (
 
         < div >
-            <h1 className='text-3xl font-bold text-center mb-16'>Applied Jobs</h1>
+            <div className='relative'>
+                <img src="../../public/images/grunge_detailed_dusty_overlay_texture_2804.jpg" alt="" className='w-full h-48 object-cover opacity-50 mb-20' />
+                <h1 className='text-3xl font-bold text-center absolute inset-0 flex justify-center items-center h-full'>Applied Jobs</h1>
+            </div>
+
             {
                 matchedJobs.map(job => <div key={job.id}>
                     <div className='border border-gray-300 rounded-lg w-3/4 p-4 overflow-hidden mx-auto mb-6'>
