@@ -4,13 +4,13 @@ import './index.css'
 import {
   createBrowserRouter,
   RouterProvider,
+  Route
 } from "react-router-dom";
 
 import Home from './components/Home';
-import Banner from './components/Banner';
-import JobCategory from './components/JobCategory';
-import Footer from './components/Footer';
 import Statistics from './components/Statistics';
+import Blog from './components/Blog';
+import Banner from './components/Banner';
 
 const router = createBrowserRouter([
   {
@@ -18,18 +18,28 @@ const router = createBrowserRouter([
     element: <Home></Home>,
     children: [
       {
-        path: '/',
-        element: <>
-                  {/* <Banner></Banner> */}
-                  {/* <JobCategory></JobCategory> */}
-                </> 
+        path: '',
+        element: <Banner></Banner>
       },
+      // {
+      //   path: '',
+      //   element: <FeaturedJobs></FeaturedJobs>,
+      //   loader: () => fetch('data.json')
+      // },
       {
         path: '/statistics',
         element: <Statistics></Statistics>
-      }
-    ]
-  },
+      },
+      {
+        path: '/blog',
+        element: <Blog></Blog>
+      },
+      // {
+      //   path: '/job/:id',
+      //   element: <JobDetails></JobDetails>
+      // }
+    ],
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
