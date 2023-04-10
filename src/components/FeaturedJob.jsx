@@ -25,7 +25,6 @@ const FeaturedJob = ({ data }) => {
                 </span>
             </div>
             <Link to={`/job/${id}`} className='text-white bg-gradient-to-r from-indigo-400 to-purple-500 mt-1 p-3 rounded-md'>View Details</Link>
-
         </div>
     );
 };

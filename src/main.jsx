@@ -10,7 +10,6 @@ import Home from './components/Home';
 import Statistics from './components/Statistics';
 import Blog from './components/Blog';
 import Banner from './components/Banner';
-import FeaturedJobs from './components/FeaturedJobs';
 import JobDetails from './components/JobDetails';
 import Applied from './components/Applied';
 
@@ -23,11 +22,6 @@ const router = createBrowserRouter([
         path: '',
         element: <Banner></Banner>
       },
-      // {
-      //   path: '',
-      //   element: <FeaturedJobs></FeaturedJobs>,
-      //   loader: () => fetch('data.json')
-      // },
       {
         path: '/statistics',
         element: <Statistics></Statistics>

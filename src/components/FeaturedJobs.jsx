@@ -4,11 +4,18 @@ import FeaturedJob from './FeaturedJob';
 
 const FeaturedJobs = () => {
     const [featureData, setFeatureData] = useState([]);
+
+    const [numToShow, setNumToShow] = useState(4);
+
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setFeatureData(data))
     }, []);
+
+    const toggleNumToShow = () => {
+        setNumToShow(featureData.length)
+    }
 
     return (
         <>
@@ -17,11 +24,15 @@ const FeaturedJobs = () => {
                 <p className='text-gray-600'>Explore thousands of job opportunities with all the information you need. Its your future</p>
             </div>
             <div className='grid lg:grid-cols-2 gap-3 max-w-5xl mx-auto px-3'>
-                {featureData.map(data => (
+                {featureData.slice(0, numToShow).map(data => (
                     <FeaturedJob key={data.id} data={data}></FeaturedJob>
-
                 ))}
             </div>
+            {numToShow < featureData.length && (
+                <button onClick={toggleNumToShow} className='block mx-auto mt-8 bg-gradient-to-r from-indigo-400 to-purple-500 px-4 py-2 text-white rounded-md'>
+                    See All Jobs
+                </button>
+            )}
         </>
     );
 };
