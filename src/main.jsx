@@ -3,14 +3,15 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import {
   createBrowserRouter,
-  RouterProvider,
-  Route
+  RouterProvider
 } from "react-router-dom";
 
 import Home from './components/Home';
 import Statistics from './components/Statistics';
 import Blog from './components/Blog';
 import Banner from './components/Banner';
+import FeaturedJobs from './components/FeaturedJobs';
+import JobDetails from './components/JobDetails';
 
 const router = createBrowserRouter([
   {
@@ -34,10 +35,21 @@ const router = createBrowserRouter([
         path: '/blog',
         element: <Blog></Blog>
       },
-      // {
-      //   path: '/job/:id',
-      //   element: <JobDetails></JobDetails>
-      // }
+      {
+        path: '/job/:id',
+        element: <JobDetails></JobDetails>,
+        loader: async ({ params }) => {
+          const res = await fetch('/data.json');
+          const data = await res.json();
+          const singleData = data.find(single => single.id == params.id);
+          if (!singleData) {
+            return {}
+          }
+          else {
+            return singleData;
+          }
+        }
+      }
     ],
   }
 ]);

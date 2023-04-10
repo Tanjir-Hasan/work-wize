@@ -14,7 +14,7 @@ const Banner = () => {
                     <p className='text-zinc-500 my-4'>Welcome to Work Wise, the job site that helps you find your next career move. At Work Wise, we're dedicated to connecting job seekers with top employers from around the world. We believe that finding the right job should be easy, efficient, and stress-free, and we've designed our platform to make that a reality.</p>
                     <button className='text-white bg-gradient-to-r from-indigo-400 to-purple-500 mt-4 p-3 rounded-md'>Get Started</button>
                 </div>
-                <img src="../../public/images/banner.png" alt="banner-img" className='h-96' />
+                <img src="../../public/banner.png" alt="banner-img" className='h-96' />
             </div>
             <JobsCategory></JobsCategory>
             <FeaturedJobs></FeaturedJobs>

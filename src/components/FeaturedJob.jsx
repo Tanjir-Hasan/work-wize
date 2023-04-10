@@ -24,7 +24,8 @@ const FeaturedJob = ({ data }) => {
                     <p className='ml-2'>{salary}</p>
                 </span>
             </div>
-            <Link to="" className='text-white bg-gradient-to-r from-indigo-400 to-purple-500 mt-1 p-3 rounded-md'>View Details</Link>
+            <Link to={`/job/${id}`} className='text-white bg-gradient-to-r from-indigo-400 to-purple-500 mt-1 p-3 rounded-md'>View Details</Link>
+
         </div>
     );
 };

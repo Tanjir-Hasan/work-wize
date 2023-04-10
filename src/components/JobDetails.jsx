@@ -1,46 +1,33 @@
-// import React, { useEffect, useState } from 'react';
-// import { useParams } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 
-// const JobDetails = () => {
-//   const id  = useParams();
-//   console.log(id.id)
-//   const [job, setJob] = useState({});
-
-//   useEffect(() => {
-//     fetch(`data.json`)
-//       .then(res => res.json())
-//       .then(data => console.log(data))
-//   }, []);
-
-//   return (
-//     <div>
-//       {/* <h1>{job.job_description}</h1> */}
-      
-//     </div>
-//   );
-// };
-
-// export default JobDetails;
-
-// import React from 'react';
-
-// const JobDetails = () => {
-//     const cartData = JSON.parse(localStorage.getItem('cart')) || {};
-
-//     return (
-//       <div>
-//         <h1>Shopping Cart</h1>
-//         {Object.values(cartData).map((item) => (
-//           <div key={item.id}>
-//             <img src={item.logo} alt="" className="w-36 h-16" />
-//             <h1>{item.job_title}</h1>
-//             <p>{item.company_name}</p>
-//             <p>Quantity: {item.quantity}</p>
-//           </div>
-//         ))}
-//       </div>
-//     );
-//   };
+const JobDetails = () => {
+  const data = useLoaderData()
 
 
-// export default JobDetails;
+  return (
+    <>
+    <h1 className='text-3xl font-bold text-center my-10'>Job Details</h1>
+      <div className='flex max-w-6xl mx-auto'>
+        <div className='w-2/4'>
+          <p>Job Description: {data.job_description}</p>
+          <p>Job Responsibility: {data.job_responsibility}</p>
+          <p>Educational Requirements:</p>
+          <p>{data.education_requirement}</p>
+          <p>Experiences: {data.experience}</p>
+        </div>
+        <div>
+          <h3>Job Details:</h3>
+          <p>Salary : {data.salary}</p>
+          <p>Job Title : {data.job_title}</p>
+          <h3>Contact Information:</h3>
+          <p>Phone: {data.phone}</p>
+          <p>Email: {data.email}</p>
+          <p>Address: {data.location}</p>
+          <button>Apply Now</button>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default JobDetails;
