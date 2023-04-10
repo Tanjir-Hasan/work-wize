@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "img": "./images/soft-dev.jpg",
+        "name": "Software Development",
+        "positions": "22 Jobs Available"
+    },
+    {
+        "id": "2",
+        "img": "./images/markate.jpg",
+        "name": "Marketing",
+        "positions": "17 Jobs Available"
+    },
+    {
+        "id": "3",
+        "img": "./images/hr.jpg",
+        "name": "Human Resources",
+        "positions": "14 Jobs Available"
+    },
+    {
+        "id": "4",
+        "img": "./images/data-ana.jpg",
+        "name": "Data Analytics",
+        "positions": "25 Jobs Available"
+    }
+]
