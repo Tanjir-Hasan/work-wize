@@ -39,7 +39,7 @@ const Statistics = () => {
 
     return (
         <div>
-            <h1  className='text-5xl font-bold text-center my-16'>All Assignments Marks Statistics</h1>
+            <h1  className='text-5xl font-bold text-center py-16 bg-gradient-to-r from-indigo-50 to-purple-50 mb-10'>All Assignments Marks Statistics</h1>
             <div style={{ margin: '0 5%', width: '90%', height: 300 }}>
                 <ResponsiveContainer>
                     <AreaChart

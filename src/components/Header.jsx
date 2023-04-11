@@ -6,8 +6,8 @@ import { BarsArrowDownIcon, BarsArrowUpIcon } from '@heroicons/react/24/solid';
 const Header = () => {
     const [isOpen, setIsOpen] = useState();
     return (
-        <nav>
-            <div className='flex justify-between items-center relative mx-auto my-6 max-w-6xl'>
+        <nav className=' bg-gradient-to-r from-indigo-50 to-purple-50'>
+            <div className='flex justify-between items-center relative mx-auto pt-6 max-w-6xl'>
                 <h3 className='text-2xl font-bold ml-6'>Work Wise</h3>
                 <div className='hidden lg:block'>
                     <ActiveLink to="/">Home</ActiveLink>
