@@ -8,9 +8,9 @@ const Footer = () => {
                     <h3 className='text-slate-50 font-bold'>Work Wise</h3>
                     <p>We believe that finding the right job should be easy, efficient, and stress-free.</p>
                     <div className='flex gap-3 mt-2'>
-                        <img src="../../public/images/facebook.png" className='h-10' alt="" />
-                        <img src="../../public/images/twitter.png" alt="" className='h-10' />
-                        <img src="../../public/images/youtube.png" alt="" className='h-10' />
+                        <img src="facebook.png" className='h-10' alt="" />
+                        <img src="twitter.png" alt="" className='h-10' />
+                        <img src="youtube.png" alt="" className='h-10' />
                     </div>
                 </div>
                 <div>
