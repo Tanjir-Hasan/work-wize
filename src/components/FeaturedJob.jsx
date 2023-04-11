@@ -8,7 +8,7 @@ const FeaturedJob = ({ data }) => {
     return (
         <div className='border border-gray-300 w-full p-8 rounded-lg overflow-hidden'>
             <img src={img} alt="" className="h-20" />
-            <h1 className='text-xl my-2'>{job_title}</h1>
+            <h1 className='text-xl font-bold my-2'>{job_title}</h1>
             <p className=''>{company_name}</p>
             <div className='lg:flex gap-4 my-2'>
                 <p className='text-purple-500 border-2 border-indigo-400 p-2 mb-1'>{job_status}</p>

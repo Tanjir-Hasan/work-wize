@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "logo": "./images/google.png",
+        "logo": "./images/google.jpg",
         "img": "google.png",
         "job_title": "Software Engineer",
         "company_name": "Google",
@@ -22,7 +22,7 @@
         "img": "./images/firefox.png",
         "job_title": "Frontend Developer",
         "company_name": "Mozilla",
-        "job_status": "Onsite",
+        "job_status": "Remote",
         "job_time": "Full time",
         "location": "San Diego, California, USA",
         "salary": "$100,000 - $130,000",
@@ -73,7 +73,7 @@
         "img": "./images/netflix.png",
         "job_title": "Backend Engineer",
         "company_name": "Netflix",
-        "job_status": "Remote",
+        "job_status": "Onsite",
         "job_time": "Full time",
         "location": "Pittsburgh, United States",
         "salary": "$140,000 - $180,000",

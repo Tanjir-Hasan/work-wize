@@ -6,7 +6,6 @@ import sad from "../../public/10110-sad.json";
 
 const ErrorPage = () => {
     const { error, status } = useRouteError();
-    console.log(status)
     return (
         <div className='flex flex-col align-middle h-screen justify-center items-center my-auto'>
             <Lottie className='w-full h-48' animationData={sad} loop={true} />

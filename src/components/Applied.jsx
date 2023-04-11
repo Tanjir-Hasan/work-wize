@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { MapPinIcon, CurrencyDollarIcon } from '@heroicons/react/24/solid'
 
@@ -9,23 +9,28 @@ const Applied = () => {
 
     const appliedID = applied.map(singleId => singleId.id);
 
-    const matchedJobs = allJobs.filter(job => appliedID.includes(job.id));
+    const [filteredJobs, setFilteredJobs] = useState([]);
 
-    const [filteredJobs, setFilteredJobs] = useState(matchedJobs);
+    const [job, setJob] = useState([]);
+
+    useEffect(() => {
+        const matchedJobs = allJobs.filter(job => appliedID.includes(job.id));
+        setFilteredJobs(matchedJobs)
+    }, [])
 
     const handleFilter = (filterType) => {
-        let filteredJobs;
-      
-        if (filterType == 'remote') {
-          filteredJobs = matchedJobs.filter(job => job.job_type === 'Remote');
-        } else if (filterType == 'on-site') {
-          filteredJobs = matchedJobs.filter(job => job.job_type === 'On-site');
+        let filtered;
+
+        if (filterType === 'remote') {
+            filtered = filteredJobs.filter(job => job.job_status === 'Remote');
+        } else if (filterType === 'on-site') {
+            filtered = filteredJobs.filter(job => job.job_status === 'Onsite');
         } else {
-          filteredJobs = matchedJobs;
+            filtered = filteredJobs;
         }
-      
-        setFilteredJobs(filteredJobs);
-      }
+        setJob(filtered);
+    }
+
 
     return (
 
@@ -37,12 +42,11 @@ const Applied = () => {
             <div className='flex justify-end gap-4 px-44 mb-8'>
                 <button className='bg-gray-200 rounded-lg px-4 py-2' onClick={() => handleFilter('remote')}>Remote</button>
                 <button className='bg-gray-200 rounded-lg px-4 py-2' onClick={() => handleFilter('on-site')}>On-site</button>
-                
             </div>
 
             {/* button ends */}
             {
-                filteredJobs.map(job => <div key={job.id}>
+                (job.length > 0 ? job : filteredJobs).map(job => <div key={job.id}>
                     <div className='border border-gray-300 rounded-lg w-3/4 p-4 overflow-hidden mx-auto mb-6'>
                         <div className='flex items-center justify-between'>
                             <div className='flex items-center'>
@@ -50,7 +54,7 @@ const Applied = () => {
                                     <img src={job.logo} alt="image" className='w-48 h-32 mr-6' />
                                 </div>
                                 <div>
-                                    <h1 className='text-xl my-2'>{job.job_title}</h1>
+                                    <h1 className='text-xl font-bold my-2'>{job.job_title}</h1>
                                     <p className=''>{job.company_name}</p>
                                     <div className='lg:flex gap-4 my-2'>
                                         <p className='text-purple-500 border-2 border-indigo-400 p-2 mb-1'>{job.job_status}</p>
