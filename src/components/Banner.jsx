@@ -2,6 +2,7 @@ import React from 'react';
 import JobsCategory from './JobsCategory';
 import FeaturedJob from './FeaturedJob';
 import FeaturedJobs from './FeaturedJobs';
+import Footer from './Footer';
 
 const Banner = () => {
     return (
@@ -20,6 +21,7 @@ const Banner = () => {
             </div>
             <JobsCategory></JobsCategory>
             <FeaturedJobs></FeaturedJobs>
+            <Footer></Footer>
         </>
     );
 };

@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import { MapPinIcon, CurrencyDollarIcon } from '@heroicons/react/24/solid'
 
 const FeaturedJob = ({ data }) => {
-    const { id, logo, job_title, company_name, job_status, job_time, location, salary } = data;
+    const { id, logo, job_title, company_name, job_status, job_time, location, salary, img } = data;
 
     return (
         <div className='border border-gray-300 w-full p-8 rounded-lg overflow-hidden'>
-            <img src={logo} alt="" className="w-36 h-16" />
+            <img src={img} alt="" className="h-20" />
             <h1 className='text-xl my-2'>{job_title}</h1>
             <p className=''>{company_name}</p>
             <div className='lg:flex gap-4 my-2'>

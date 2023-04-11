@@ -7,8 +7,8 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState();
     return (
         <nav className=' bg-gradient-to-r from-indigo-50 to-purple-50'>
-            <div className='flex justify-between items-center relative mx-auto pt-6 max-w-6xl'>
-                <h3 className='text-2xl font-bold ml-6'>Work Wise</h3>
+            <div className='flex justify-between items-center relative mx-auto pt-6 pb-6 max-w-6xl'>
+                <h3 className='text-3xl font-bold ml-6'>Work Wise</h3>
                 <div className='hidden lg:block'>
                     <ActiveLink to="/">Home</ActiveLink>
                     <ActiveLink to="/statistics">Statistics</ActiveLink>
@@ -20,8 +20,8 @@ const Header = () => {
             <span className='md:hidden absolute top-6 right-6' onClick={() => setIsOpen(!isOpen)}>
                 {
                     isOpen === true ?
-                        (<BarsArrowUpIcon className='h-8 w-6 text-white bg-violet-400 rounded-sm' />)
-                        : (<BarsArrowDownIcon className='h-8 w-6 text-white bg-violet-400 rounded-sm' />)
+                        (<BarsArrowUpIcon className='h-8 w-6 text-purple-600 rounded-sm' />)
+                        : (<BarsArrowDownIcon className='h-8 w-6 text-purple-600 rounded-sm' />)
                 }
             </span>
             {

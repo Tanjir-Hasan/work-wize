@@ -1,7 +1,8 @@
 [
     {
         "id": "1",
-        "logo": "./images/google_prev_ui.png",
+        "logo": "./images/google.png",
+        "img": "google.png",
         "job_title": "Software Engineer",
         "company_name": "Google",
         "job_status": "Remote",
@@ -18,6 +19,7 @@
     {
         "id": "2",
         "logo": "./images/mozilla.jpg",
+        "img": "./images/firefox.png",
         "job_title": "Frontend Developer",
         "company_name": "Mozilla",
         "job_status": "Onsite",
@@ -34,6 +36,7 @@
     {
         "id": "3",
         "logo": "./images/apple.jpg",
+        "img": "./images/apple.png",
         "job_title": "iOS Developer",
         "company_name": "Apple",
         "job_status": "Remote",
@@ -50,6 +53,7 @@
     {
         "id": "4",
         "logo": "./images/samsung.jpg",
+        "img": "./images/samsung.png",
         "job_title": "Android Developer",
         "company_name": "Samsung",
         "job_status": "Onsite",
@@ -66,6 +70,7 @@
     {
         "id": "5",
         "logo": "./images/netflix.jpg",
+        "img": "./images/netflix.png",
         "job_title": "Backend Engineer",
         "company_name": "Netflix",
         "job_status": "Remote",
@@ -82,6 +87,7 @@
     {
         "id": "6",
         "logo": "./images/hbo.jpg",
+        "img": "./images/hbo.png",
         "job_title": "Content Producer",
         "company_name": "HBO Max",
         "job_status": "Onsite",

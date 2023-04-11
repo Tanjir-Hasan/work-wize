@@ -1,25 +1,25 @@
 [
     {
         "id": "1",
-        "img": "./images/soft-dev.jpg",
+        "img": "./images/app-development.png",
         "name": "Software Development",
         "positions": "22 Jobs Available"
     },
     {
         "id": "2",
-        "img": "./images/markate.jpg",
+        "img": "./images/icons8-report-card-50.png",
         "name": "Marketing",
         "positions": "17 Jobs Available"
     },
     {
         "id": "3",
-        "img": "./images/hr.jpg",
+        "img": "./images/icons8-human-resources-64.png",
         "name": "Human Resources",
         "positions": "14 Jobs Available"
     },
     {
         "id": "4",
-        "img": "./images/data-ana.jpg",
+        "img": "./images/icons8-data-analytics-64.png",
         "name": "Data Analytics",
         "positions": "25 Jobs Available"
     }
