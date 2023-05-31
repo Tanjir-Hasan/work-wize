@@ -1,4 +1,4 @@
-* Assignment 9: Work Wise
+* Work Wise
 
 <hr>
 
